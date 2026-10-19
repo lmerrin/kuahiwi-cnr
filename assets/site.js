@@ -1,11 +1,12 @@
 'use strict';
+const translateUi = value => window.kuahiwiLanguage ? window.kuahiwiLanguage.text(value) : value;
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#main-nav');
 function closeMenu(returnFocus = false) {
   if (!toggle || !nav) return;
   nav.classList.remove('is-open');
   toggle.setAttribute('aria-expanded', 'false');
-  toggle.setAttribute('aria-label', 'Open navigation');
+  toggle.setAttribute('aria-label', translateUi('Open navigation'));
   if (returnFocus) toggle.focus();
 }
 if (toggle && nav) {
@@ -13,13 +14,13 @@ if (toggle && nav) {
     const open = toggle.getAttribute('aria-expanded') !== 'true';
     nav.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    toggle.setAttribute('aria-label', translateUi(open ? 'Close navigation' : 'Open navigation'));
   });
   nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeMenu()));
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') closeMenu(true);
   });
-  window.matchMedia('(min-width: 801px)').addEventListener('change', () => closeMenu());
+  window.matchMedia('(min-width: 1051px)').addEventListener('change', () => closeMenu());
 }
 document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 const form = document.querySelector('#inquiry-form');
@@ -29,9 +30,9 @@ if (form) form.addEventListener('submit', event => {
   const f = new FormData(form);
   const body = ['Name: ' + f.get('name') + ' ' + f.get('lastName'), 'Email: ' + f.get('email'),
     'Phone: ' + (f.get('phone') || 'Not supplied'), '', String(f.get('message')),
-    '', 'Photos can be attached to this email before sending.'].join('\n');
+    '', translateUi('Photos can be attached to this email before sending.')].join('\n');
   window.location.href = 'mailto:shaydon.kbcr@gmail.com?subject=' + encodeURIComponent('Bike inquiry: ' + (f.get('service') || 'Kuahiwi')) + '&body=' + encodeURIComponent(body);
-  document.querySelector('#form-status').textContent = 'Your mail app should open with a draft. Review it and send it there. Nothing has been submitted by this website.';
+  document.querySelector('#form-status').textContent = translateUi('Your mail app should open with a draft. Review it and send it there. Nothing has been submitted by this website.');
 });
 const search = document.querySelector('#faq-search');
 if (search) search.addEventListener('input', () => {
@@ -52,8 +53,8 @@ if (video && videoToggle) {
   let manuallyPaused = false;
   function syncVideoButton() {
     const label = video.paused ? 'Play video' : 'Pause video';
-    videoToggle.textContent = label;
-    videoToggle.setAttribute('aria-label', label + ' background');
+    videoToggle.textContent = translateUi(label);
+    videoToggle.setAttribute('aria-label', translateUi(label + ' background'));
   }
   function startVideo() {
     if (!loaded) {
@@ -114,3 +115,16 @@ if (tabs) {
   document.querySelector('.rates-workbench').classList.add('enhanced');
   selectRate(1);
 }
+
+// Keep runtime labels and active FAQ filtering in sync with the language choice.
+document.addEventListener('kuahiwi:languagechange', () => {
+  if (toggle) toggle.setAttribute('aria-label', translateUi(toggle.getAttribute('aria-expanded') === 'true' ? 'Close navigation' : 'Open navigation'));
+  if (video && videoToggle) {
+    const label = video.paused ? 'Play video' : 'Pause video';
+    videoToggle.textContent = translateUi(label);
+    videoToggle.setAttribute('aria-label', translateUi(label + ' background'));
+  }
+  const status = document.querySelector('#form-status');
+  if (status?.textContent) status.textContent = translateUi('Your mail app should open with a draft. Review it and send it there. Nothing has been submitted by this website.');
+  if (search) search.dispatchEvent(new Event('input'));
+});

@@ -19,3 +19,10 @@ Commit: Redesign service rates, balance owner section, update privacy policy, an
 
 ## Before launch
 Preview stays noindex. Confirm business details, prices, email, policy practices, file/photo/font permissions and the final form workflow. Uploads are not yet enabled. Complete mobile/desktop browser checks and mail-client handoff testing. Plan the Wix transfer separately, including URLs/redirects, DNS/email records and search indexing, before changing the live domain.
+
+## Version 9 — English / Pidgin
+Use this package instead of v8. The header language buttons appear on the homepage, privacy policy and 404 page. English is the initial default; visitors can choose Pidgin and their browser remembers the choice. No translation API or additional external request is required.
+
+Edit `assets/translations.js` to change a translation. `PIDGIN_REVIEW.md` provides the English and Pidgin draft side by side. The English keys must continue to match the English website copy. Review the draft wording with Shaydon before launch. Check both languages on desktop and mobile, including the menu, service rate tabs, FAQ search, video controls and contact form.
+
+The contact form still opens an email draft. File uploads are not connected. Preview noindex settings remain enabled; no domain transfer or deployment is included.
