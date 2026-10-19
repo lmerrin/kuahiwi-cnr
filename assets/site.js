@@ -5,7 +5,7 @@ function closeMenu(returnFocus = false) {
   if (!toggle || !nav) return;
   nav.classList.remove('is-open');
   toggle.setAttribute('aria-expanded', 'false');
-  toggle.textContent = 'Menu';
+  toggle.setAttribute('aria-label', 'Open navigation');
   if (returnFocus) toggle.focus();
 }
 if (toggle && nav) {
@@ -13,7 +13,7 @@ if (toggle && nav) {
     const open = toggle.getAttribute('aria-expanded') !== 'true';
     nav.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.textContent = open ? 'Close' : 'Menu';
+    toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
   });
   nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeMenu()));
   document.addEventListener('keydown', event => {
@@ -80,4 +80,37 @@ if (video && videoToggle) {
     else { manuallyPaused = true; video.pause(); }
   });
   syncVideoButton();
+}
+
+// Progressive enhancement: without JS, every rate panel remains visible.
+const tabs = document.querySelector('#rate-tabs');
+if (tabs) {
+  const buttons = [...tabs.querySelectorAll('[role="tab"]')];
+  const panels = buttons.map(button => document.getElementById(button.getAttribute('aria-controls')));
+  function selectRate(index, focus = false) {
+    buttons.forEach((button, i) => {
+      const active = i === index;
+      button.setAttribute('aria-selected', String(active));
+      button.tabIndex = active ? 0 : -1;
+      panels[i].hidden = !active;
+      panels[i].setAttribute('role', 'tabpanel');
+    });
+    if (focus) buttons[index].focus();
+  }
+  buttons.forEach((button, index) => {
+    button.addEventListener('click', () => selectRate(index));
+    button.addEventListener('keydown', event => {
+      let next = index;
+      if (event.key === 'ArrowDown' || event.key === 'ArrowRight') next = (index + 1) % buttons.length;
+      else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') next = (index - 1 + buttons.length) % buttons.length;
+      else if (event.key === 'Home') next = 0;
+      else if (event.key === 'End') next = buttons.length - 1;
+      else return;
+      event.preventDefault();
+      selectRate(next, true);
+    });
+  });
+  tabs.hidden = false;
+  document.querySelector('.rates-workbench').classList.add('enhanced');
+  selectRate(1);
 }

@@ -19,3 +19,6 @@ Remove global 1700px body cap so hero reaches the viewport edges. Keep video cov
 
 ## v7 process redesign
 Read sequentially top-to-bottom. Five full-width rows, image left/text right on desktop; stack frame above text on small phones. Equal 164px image frames with centered uncropped contain images, padding and a fine outline. Preserve all process wording and illustrations, plus all v6 changes.
+
+## v8 requested refinement
+Swap the two service photos. Replace privacy draft with the user-approved launch-style policy, matching current email-draft behavior. Replace pricing accordions with an accessible category selector and a single detail panel, retaining every existing heading, rate, list and description. All panels visible without JavaScript. Mobile category buttons wrap and remain keyboard accessible. Owner copy uses evenly distributed paragraphs beside the full portrait on desktop, with natural flow on mobile. Icon-only mobile hamburger/close button with accessible labels. Responsive checks target 320px, 375px, 768px, 1024px and wide desktops through CSS review; actual browser rendering unavailable.
