@@ -26,25 +26,39 @@ const form = document.querySelector('#inquiry-form');
 if (form) form.addEventListener('submit', event => {
   event.preventDefault();
   if (!form.reportValidity()) return;
-  const fields = new FormData(form);
-  const body = ['Name: ' + fields.get('name'), 'Email: ' + fields.get('email'),
-    'Phone: ' + (fields.get('phone') || 'Not supplied'), '', String(fields.get('message')),
-    '', 'I can attach photos to this email before sending.'].join('\n');
-  const subject = 'Bike inquiry: ' + fields.get('service');
-  window.location.href = 'mailto:shaydon.kbcr@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-  document.querySelector('#form-status').textContent = 'Your mail app should open with a draft. Review it and press Send there. Nothing has been submitted by this website.';
+  const f = new FormData(form);
+  const body = ['Name: ' + f.get('name') + ' ' + f.get('lastName'), 'Email: ' + f.get('email'),
+    'Phone: ' + (f.get('phone') || 'Not supplied'), '', String(f.get('message')),
+    '', 'Photos can be attached to this email before sending.'].join('\n');
+  window.location.href = 'mailto:shaydon.kbcr@gmail.com?subject=' + encodeURIComponent('Bike inquiry: ' + (f.get('service') || 'Kuahiwi')) + '&body=' + encodeURIComponent(body);
+  document.querySelector('#form-status').textContent = 'Your mail app should open with a draft. Review it and send it there. Nothing has been submitted by this website.';
 });
-const dialog = document.querySelector('#photo-dialog');
-if (dialog) {
-  let opener;
-  document.querySelectorAll('.gallery-open').forEach(button => button.addEventListener('click', () => {
-    opener = button;
-    const image = dialog.querySelector('img');
-    image.src = button.dataset.image;
-    image.alt = button.querySelector('img').alt;
-    dialog.showModal();
-  }));
-  dialog.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
-  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
-  dialog.addEventListener('close', () => { if (opener) opener.focus(); });
+const search = document.querySelector('#faq-search');
+if (search) search.addEventListener('input', () => {
+  const term = search.value.trim().toLowerCase();
+  let matches = 0;
+  document.querySelectorAll('.faq-list details').forEach(item => {
+    const match = item.textContent.toLowerCase().includes(term);
+    item.hidden = !match;
+    if (match) matches++;
+  });
+  document.querySelector('#faq-empty').hidden = matches !== 0;
+});
+const video = document.querySelector('#hero-video');
+const videoToggle = document.querySelector('#video-toggle');
+if (video && videoToggle) {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function syncVideoButton() {
+    const label = video.paused ? 'Play video' : 'Pause video';
+    videoToggle.textContent = label;
+    videoToggle.setAttribute('aria-label', label + ' background');
+  }
+  function startVideo() { video.play().catch(syncVideoButton); }
+  video.addEventListener('play', syncVideoButton);
+  video.addEventListener('pause', syncVideoButton);
+  if (reduceMotion.matches) { video.autoplay = false; video.pause(); }
+  else startVideo();
+  reduceMotion.addEventListener('change', event => { if (event.matches) video.pause(); });
+  videoToggle.addEventListener('click', () => { if (video.paused) startVideo(); else video.pause(); });
+  syncVideoButton();
 }
