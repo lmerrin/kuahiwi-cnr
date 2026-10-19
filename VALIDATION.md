@@ -15,3 +15,6 @@ Responsive CSS reviewed for 320/375/768/1024px and wide desktop: category panels
 Passed: JavaScript syntax; all four pages have language controls and header/footer Events links; unique IDs; all local references and fragment targets resolve; 11 carousel photos; distinct upcoming/past sections; homepage remains a landing page. Browser visual QA remains pending, including mobile swipe, keyboard scrolling and both languages. No migration or deployment performed.
 
 Mock DOM checks also passed for carousel movement, boundary button states, reduced motion, saved language preference, exact English restoration and blocked preference storage.
+
+## Version 11
+All four pages checked for bicycle/close SVG icons and retained accessible menu state/label attributes. Existing menu JavaScript remains unchanged. Visual review on a mobile browser is still pending.

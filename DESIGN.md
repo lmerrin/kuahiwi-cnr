@@ -29,3 +29,6 @@ User authorized building draft translations before owner approval. English is de
 
 ## v10 Events page specification
 Separate events.html, linked in header/footer. Navy introduction, compact upcoming section with honest empty state, cream past-event feature. Flyer alongside factual recap; horizontally scrollable photo strip below with native touch swipe and previous/next controls. Photos contained within consistent frames. No automatic movement. Reuse fonts, colors and English/Pidgin controls. Hide Projects/Our Bikes navigation only in Pidgin; keep the existing homepage content. Do not infer an event year or future dates.
+
+## v11 Mobile menu
+Replace the hamburger with a crisp inline bicycle outline. Keep the same menu button and accessible expanded state, English/Pidgin labels, touch target and keyboard behavior. Show a close icon when expanded. No external icon dependency.
