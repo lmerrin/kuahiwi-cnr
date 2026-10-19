@@ -5,3 +5,25 @@
 @media(max-width:800px){html{scroll-padding-top:25px}.header{top:15px;padding:8px 12px}.nav-logo{width:52px;height:52px}.nav-logo img{width:48px;height:48px}.menu-toggle{display:block}.header nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--navy);padding:20px;border-radius:20px;margin-top:10px}.header nav.is-open{display:flex;flex-direction:column;align-items:stretch;gap:0}.header nav>a{padding:13px 15px;font-size:18px}.header nav .button{margin-top:10px;background:var(--red)}.hero{min-height:640px;aspect-ratio:auto}.hero-content{padding-top:90px}.hero-content>img{width:300px}.hero h1{font-size:20px}.services{grid-template-columns:1fr}.services-copy{padding:45px 7%}.service-grid{gap:32px}.service-photo img{width:100%;height:auto}.section{padding:50px 7%}.price-list{gap:21px;margin-top:30px}.price-group summary{font-size:17px;padding:22px 45px;min-height:65px}.price-group summary:after{right:22px;top:17px}.price-content,.price-group dl{padding:25px}.process-frame{border-width:6px;border-radius:0 100px 0 0;padding:45px 5% 30px}.process-intro{font-size:15px}.process li{grid-template-columns:1fr 95px;padding:20px;gap:15px;border-radius:30px}.process li img{width:95px;height:95px;border-radius:25px}.process li h3{font-size:20px}.process li p{font-size:14px}.process-outro{font-size:14px}.retros{grid-template-columns:1fr}.retros>div{padding:45px 9%}.retros-logo{max-width:450px}.retros figure img{width:100%;height:auto}.about-grid{grid-template-columns:1fr;gap:30px}.about-grid figure{max-width:400px;justify-self:center}.about-grid>div{font-size:16px}.faq{grid-template-columns:1fr;gap:25px}.faq>div:first-child{padding:0}.faq h2{margin-bottom:5px}.faq-panel{padding:24px}.faq-top{gap:18px}.faq-list summary{font-size:15px}.contact{padding-top:45px}.contact form{padding:35px 7%;border-radius:40px 40px 0 0}.footer-grid{gap:30px;grid-template-columns:1fr 1fr}.footer-logo{grid-column:1/-1}.footer-logo img{width:125px}.footer-grid>div:last-child>a{font-size:13px}.subpage-header{top:auto;width:92%;margin:15px auto}.policy h1{font-size:38px}.rider-photos{grid-template-columns:16fr 9fr}}
 @media(max-width:480px){body{font-size:16px}.hero{min-height:590px}.hero-content>img{width:250px}.hero h1{font-size:18px}.service-grid{gap:30px 24px}.service-grid h3{font-size:17px}.service-grid p{font-size:14px}.service-grid img{width:55px;height:55px}.process-frame{padding:40px 18px 25px}.process li{grid-template-columns:1fr;gap:18px}.process li img{justify-self:center;width:110px;height:110px}.process li h3{font-size:19px}.process li p{font-size:15px}.process li{padding:22px}.price-group dl>div{display:block}.price-group dt{max-width:100%}.price-group dd{text-align:left;margin-top:6px}.faq-top{display:block}.faq-top label{display:block;width:100%;margin-top:20px}.field-row{grid-template-columns:1fr;gap:0}.contact form{padding:32px 24px}.contact label{margin-top:20px}.footer-grid{grid-template-columns:1fr}.footer-logo{grid-column:auto}.footer-bottom{flex-direction:column;gap:15px}.rider-photos{grid-template-columns:1fr}.rider-photos img{width:100%;height:auto}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+/* v4: same five services, cleaner row-based organization. */
+.services{grid-template-columns:58% 42%}
+.services-copy{padding:55px 8%}
+.service-grid{display:block;margin:0}
+.service-grid article,.service-grid article:last-child{display:grid;grid-template-columns:66px minmax(0,1fr);gap:25px;max-width:none;padding:24px 0;border-top:1px solid #1d323f26}
+.service-grid article:first-child{border-top:0;padding-top:0}
+.service-grid img{margin:3px 0 0;width:60px;height:60px}
+.service-grid h3{margin:0 0 9px;font-size:20px}
+.service-grid p{font-size:16px;line-height:1.6;margin:0;max-width:520px}
+.service-photo{background:var(--cream);justify-content:center;align-items:center}
+.service-photo img{width:100%;height:auto;object-fit:contain}
+@media(max-width:800px){.services{grid-template-columns:1fr}.services-copy{padding:45px 7%}.service-grid article,.service-grid article:last-child{grid-template-columns:56px minmax(0,1fr);gap:20px;padding:24px 0}.service-grid img{width:52px;height:52px}.service-grid h3{font-size:19px}.service-grid p{font-size:16px}.service-photo img{max-width:700px}}
+@media(max-width:400px){.service-grid article,.service-grid article:last-child{grid-template-columns:43px minmax(0,1fr);gap:15px}.service-grid img{width:42px;height:42px}}
+
+/* v5: two full-width, uncropped service photos, directly stacked. */
+.services{align-items:stretch}
+.service-photo{display:block;align-self:start;background:transparent;line-height:0}
+.service-photo img{display:block;width:100%;height:auto;max-width:none;margin:0;border:0;object-fit:contain}
+.services-copy{display:flex;flex-direction:column;justify-content:flex-start}
+.services-copy>.eyebrow{align-self:flex-start}
+@media(min-width:801px){.service-grid{display:flex;flex:1;flex-direction:column;justify-content:space-between}.service-grid article,.service-grid article:last-child{flex:none}}

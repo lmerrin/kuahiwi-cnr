@@ -1,37 +1,31 @@
-# Kuahiwi website v3 - original Wix layout reference
+# Kuahiwi website v5
 
-Upload this version instead of v1 or v2. It is a complete standalone static package; no prior files are needed.
+Complete revised package; use this instead of v1-v4. No Wix-to-Cloudflare transfer, DNS change or deployment was performed.
 
-## What changed
-- Rebuilt the composition from the three supplied desktop screenshots.
-- Centered logo over a video hero; capsule navigation; original hero tagline.
-- Original five service icons, split services/photo section, nine rounded pricing rows.
-- Original two rider photos, five illustrated process steps, Rice Street Retros graphic and bike photo.
-- Owner story with the portrait on the right, searchable FAQ panel with 15 questions, centered contact panel and navy footer.
-- Removed testimonials and the footer address block as requested.
-- Full photographs use their original proportions rather than cover cropping. This can make their heights differ from the Wix screenshot, which cropped some placements.
+## Changes
+- v5: added the supplied red bicycle photo directly below the wheel photo, with no gap and no image-panel padding. Both photographs retain their full proportions.
 
-## Important video distinction
-The supplied IMG_4441.MOV is a 22.3-second vertical clip of cyclists by the harbor. It has been converted to silent, browser-compatible H.264 MP4 and used as the hero background. The original screenshot shows a workshop video; that workshop clip was not provided. Replace assets/video/harbor-ride.mp4 and the matching poster when the intended workshop footage is available, or update the HTML paths. This is a closer recreation, not a verified pixel-exact export of Wix.
+- What we do: same five headings, descriptions, icons, order and wheel photograph. Reorganized into five aligned rows; no service information added or removed.
+- Header: correct workshop footage from the supplied ScreenRecording MOV, using a 24-second silent excerpt (seconds 2-26). The full 3m14s recording is not downloaded by visitors.
+- Smaller images and video. Poster-first loading and delayed background video request; reduced-motion/save-data support and a pause/play control.
+- Rest of the screenshot-based layout retained. No testimonials or footer address block.
 
-Background video fills the hero with cover sizing, which crops the vertical clip on wide screens. All still photographs are uncropped. A matching landscape workshop clip will fit the desktop hero more naturally. Video pauses for reduced-motion preferences; a play/pause control is provided. Audio has been removed for background use.
+The service image column now contains two photos. Its exact height follows the photo proportions and the responsive text layout.
 
-## GitHub preview - simple steps
-1. Unzip this package.
-2. Open the intended repository.
-3. Upload the CONTENTS of the folder, including index.html and the assets folder. Do not upload the ZIP as the website or wrap the files in another folder.
-4. Commit with: Restore original Kuahiwi layout and add video - v3.
-5. If Pages is not enabled: Settings > Pages > Deploy from a branch > main > / (root) > Save.
-6. Wait for deployment and review the Pages link.
+## What to upload to GitHub
+Unzip, then upload index.html, privacy-policy.html, 404.html, robots.txt, sitemap.xml and the entire assets folder at the repository root. Do not upload the ZIP itself as the website. _headers and _redirects are for Cloudflare Pages and are ignored by GitHub Pages. Markdown files and SERVICES_DESIGN_PREVIEW.png are handoff documentation only.
 
-No build command or npm installation is required. To review locally, open index.html, or run python3 -m http.server 8000 from this folder.
+Commit message: Add second photo beneath the services image.
+
+No build command, npm install or previous package required. To view locally open index.html, or run python3 -m http.server 8000 in this folder.
+
+## Video controls
+A silent looping workshop video sits behind the logo. Its source loads after the page/poster. With reduced-motion or save-data enabled, the poster remains until Play is pressed. Autoplay can also be restricted by the visitor’s browser. The background uses cover sizing, while still photographs retain full proportions.
 
 ## Contact form
-The original Wix backend does not transfer with standalone HTML. This form intentionally opens an email draft; the visitor reviews and sends it in their mail app. It does not upload files or send/store messages on the website. Photos can be attached in the mail app. Direct form delivery and upload require an approved backend; do not put secrets in browser JavaScript.
+This version prepares an email draft in the visitor’s mail app. It does not send/store messages or upload attachments from the website. Visitors attach images and send from their mail app. An approved backend is needed for direct delivery/uploads.
 
-## Before production launch
-Confirm official business name, contact email (retrievals differed), service rates/parts inclusions, operating details, warranty and the Rice Street Retros relationship. Confirm photo and webfont licensing. Review the policy draft. Add the correct workshop video if desired. Test desktop/mobile, keyboard controls, video playback, menu, FAQ search and mail-client draft on real devices. Original screenshots are desktop-only; mobile styling is an adaptation.
+## Before migration
+First finish reviewing the website and confirming business details, contact email, pricing, photo/font usage permissions, policies and form workflow. Browser/device QA and real form delivery tests are pending. Preview remains noindex. Do not change DNS or remove Wix until a migration plan covers existing URLs, redirects, search indexing, domain ownership and any email records. This package does not perform those changes.
 
-The preview is intentionally noindex. Before production: remove noindex from approved pages, change robots.txt to Allow: / and add the sitemap URL, remove policy draft warnings only after review, confirm canonical/OG/sitemap URLs and deploy to the intended host. Keep 404 noindex. _headers and _redirects are for Cloudflare Pages; GitHub Pages does not use them.
-
-No live Wix site, GitHub repository or hosting configuration was changed. All v3 modifications are in this ZIP.
+When ready for production: review privacy draft, robots and noindex; confirm canonical/social/sitemap URLs and approved business details. _headers and _redirects apply only on Cloudflare Pages. Full transfer steps can be prepared once the site is approved and the domain/DNS setup is known.

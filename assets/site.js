@@ -48,17 +48,36 @@ const video = document.querySelector('#hero-video');
 const videoToggle = document.querySelector('#video-toggle');
 if (video && videoToggle) {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let loaded = false;
+  let manuallyPaused = false;
   function syncVideoButton() {
     const label = video.paused ? 'Play video' : 'Pause video';
     videoToggle.textContent = label;
     videoToggle.setAttribute('aria-label', label + ' background');
   }
-  function startVideo() { video.play().catch(syncVideoButton); }
+  function startVideo() {
+    if (!loaded) {
+      const source = video.querySelector('source');
+      source.src = source.dataset.src;
+      video.load();
+      loaded = true;
+    }
+    video.play().catch(syncVideoButton);
+  }
   video.addEventListener('play', syncVideoButton);
   video.addEventListener('pause', syncVideoButton);
-  if (reduceMotion.matches) { video.autoplay = false; video.pause(); }
-  else startVideo();
+  function scheduleBackground() {
+    if (reduceMotion.matches || manuallyPaused || navigator.connection?.saveData) return;
+    const begin = () => { if (!reduceMotion.matches && !manuallyPaused) startVideo(); };
+    if ('requestIdleCallback' in window) window.requestIdleCallback(begin, {timeout: 1800});
+    else window.setTimeout(begin, 700);
+  }
+  if (document.readyState === 'complete') scheduleBackground();
+  else window.addEventListener('load', scheduleBackground, {once: true});
   reduceMotion.addEventListener('change', event => { if (event.matches) video.pause(); });
-  videoToggle.addEventListener('click', () => { if (video.paused) startVideo(); else video.pause(); });
+  videoToggle.addEventListener('click', () => {
+    if (video.paused) { manuallyPaused = false; startVideo(); }
+    else { manuallyPaused = true; video.pause(); }
+  });
   syncVideoButton();
 }

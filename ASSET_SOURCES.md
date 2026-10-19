@@ -27,3 +27,9 @@ step-4: https://static.wixstatic.com/media/439869_0cf20361cca1464f9ecdee88c88776
 step-5: https://static.wixstatic.com/media/439869_179308aff2d14f8bb15990ceaae5895c~mv2.png
 rice-street: https://static.wixstatic.com/media/439869_0115a3e4ae61463b84bb113323286d6a~mv2.png
 Video: user-supplied IMG_4441.MOV, harbor cycling; converted to silent H.264 MP4. Screenshot workshop header clip not supplied.
+
+## v4
+Header: user-supplied ScreenRecording_09-11-2025 22-46-48_1.mov; silent 24-second excerpt from seconds 2-26. Earlier harbor clip removed. Existing website image assets resized/recompressed without cropping; transparent logo retained as WebP. Service content unchanged.
+
+## v5
+Second service photograph: user-supplied IMG_0310.jpg, resized to 1400 × 1050 WebP without cropping.
