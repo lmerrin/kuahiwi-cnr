@@ -13,3 +13,9 @@ Keep the approved screenshot-based layout elsewhere. Reorganize the services sec
 
 ## v5 service photo stack
 Place user-supplied IMG_0310.jpg directly below the wheel photograph, flush with no gap or surrounding padded image panel. Retain natural aspect ratios and optimize as WebP. Keep the redesigned service text and all other sections unchanged.
+
+## v6 bounded changes
+Remove global 1700px body cap so hero reaches the viewport edges. Keep video covering hero on all breakpoints. Reorder service entries: Fix Current Bikes; Custom Bike Builds; Buy Old Bikes; Bike Shipping; Retro Parts and Sourcing, preserving descriptions/icons. Replace only navigation mark with supplied transparent gear/island symbol; retain displayed size by compensating for transparent canvas in CSS. Reorganize existing process content into 3 cards then 2 centered cards, using the same five illustrations/titles/descriptions and capacity note. No file upload input is presented as operational until an actual server/form provider is connected. Current email-draft form cannot deliver attachments.
+
+## v7 process redesign
+Read sequentially top-to-bottom. Five full-width rows, image left/text right on desktop; stack frame above text on small phones. Equal 164px image frames with centered uncropped contain images, padding and a fine outline. Preserve all process wording and illustrations, plus all v6 changes.

@@ -1,31 +1,23 @@
-# Kuahiwi website v5
+# Kuahiwi website v7
 
-Complete revised package; use this instead of v1-v4. No Wix-to-Cloudflare transfer, DNS change or deployment was performed.
+Complete package; upload this instead of prior versions. No Wix migration, DNS or hosting change was performed.
 
 ## Changes
-- v5: added the supplied red bicycle photo directly below the wheel photo, with no gap and no image-panel padding. Both photographs retain their full proportions.
+- Removed the 1700px page-width cap; video hero now spans the viewport. Browser verification pending.
+- Services reordered: Fix Current Bikes; Custom Bike Builds; Buy Old Bikes; Bike Shipping; Retro Parts and Sourcing. All existing descriptions and icons retained. Both uncropped service photos retained.
+- Navigation uses the supplied transparent gear/island symbol at the previous displayed size. The hero/footer retain the full company logo.
+- How it works: five sequential top-to-bottom rows, with equal-size centered image frames. All five illustrations, titles, descriptions, intro and capacity note retained; no new information.
+- Correct workshop video and previous asset optimizations retained.
 
-- What we do: same five headings, descriptions, icons, order and wheel photograph. Reorganized into five aligned rows; no service information added or removed.
-- Header: correct workshop footage from the supplied ScreenRecording MOV, using a 24-second silent excerpt (seconds 2-26). The full 3m14s recording is not downloaded by visitors.
-- Smaller images and video. Poster-first loading and delayed background video request; reduced-motion/save-data support and a pause/play control.
-- Rest of the screenshot-based layout retained. No testimonials or footer address block.
+HOW_IT_WORKS_VERTICAL_PREVIEW.png is a static design concept, not a browser screenshot. No need to upload it.
 
-The service image column now contains two photos. Its exact height follows the photo proportions and the responsive text layout.
+## GitHub upload
+Unzip and upload index.html, privacy-policy.html, 404.html, robots.txt, sitemap.xml and the entire assets folder at repository root. Do not upload the ZIP as the site. Markdown files and PNG design preview are documentation. _headers and _redirects apply on Cloudflare Pages, not GitHub Pages. No build/npm installation required.
 
-## What to upload to GitHub
-Unzip, then upload index.html, privacy-policy.html, 404.html, robots.txt, sitemap.xml and the entire assets folder at the repository root. Do not upload the ZIP itself as the website. _headers and _redirects are for Cloudflare Pages and are ignored by GitHub Pages. Markdown files and SERVICES_DESIGN_PREVIEW.png are handoff documentation only.
+Commit: Redesign How It Works as vertical steps with consistent image frames.
 
-Commit message: Add second photo beneath the services image.
+## Form uploads
+Current form still prepares an email draft. It does not send inquiries or upload files. FILE_UPLOAD_PLAN.md explains hosted-form and Cloudflare-native options for actual five-file uploads. No account, backend or upload service has been connected. Do not advertise upload functionality until receipt is tested end to end.
 
-No build command, npm install or previous package required. To view locally open index.html, or run python3 -m http.server 8000 in this folder.
-
-## Video controls
-A silent looping workshop video sits behind the logo. Its source loads after the page/poster. With reduced-motion or save-data enabled, the poster remains until Play is pressed. Autoplay can also be restricted by the visitor’s browser. The background uses cover sizing, while still photographs retain full proportions.
-
-## Contact form
-This version prepares an email draft in the visitor’s mail app. It does not send/store messages or upload attachments from the website. Visitors attach images and send from their mail app. An approved backend is needed for direct delivery/uploads.
-
-## Before migration
-First finish reviewing the website and confirming business details, contact email, pricing, photo/font usage permissions, policies and form workflow. Browser/device QA and real form delivery tests are pending. Preview remains noindex. Do not change DNS or remove Wix until a migration plan covers existing URLs, redirects, search indexing, domain ownership and any email records. This package does not perform those changes.
-
-When ready for production: review privacy draft, robots and noindex; confirm canonical/social/sitemap URLs and approved business details. _headers and _redirects apply only on Cloudflare Pages. Full transfer steps can be prepared once the site is approved and the domain/DNS setup is known.
+## Review and migration
+Browser/device checks remain pending. Confirm business/contact details, prices, image permissions, webfont rights and policy draft. The preview is intentionally noindex. Finish site review and form workflow before a migration plan covering current URLs, redirects, domain/DNS/email records and Google indexing. Do not remove Wix or switch DNS yet.

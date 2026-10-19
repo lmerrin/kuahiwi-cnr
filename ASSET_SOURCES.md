@@ -33,3 +33,9 @@ Header: user-supplied ScreenRecording_09-11-2025 22-46-48_1.mov; silent 24-secon
 
 ## v5
 Second service photograph: user-supplied IMG_0310.jpg, resized to 1400 × 1050 WebP without cropping.
+
+## v6
+Navigation logo: user-supplied Untitled design (17).png, optimized to transparent WebP without cropping or recoloring.
+
+## v6
+Navigation logo: user-supplied Untitled design (17).png, optimized to transparent WebP without cropping or recoloring.

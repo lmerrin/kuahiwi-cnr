@@ -1,3 +1,5 @@
-# v5 validation
+# v7 validation
 
-All local assets/links/anchor targets resolve. HTML diff confirms only a second photo was added to the v4 homepage. Both service photos use natural height and full width with no gap, frame or padded background. All text and other sections unchanged. Added image decodes; JavaScript syntax check passed, source unchanged from v4. Browser visual/device checks remain pending. No hosting/migration changes.
+Homepage HTML is byte-for-byte identical to v6: no copy, images, ordering, form or other content changed. CSS reorganizes process into five top-to-bottom rows and equal framed image areas. Local links/assets/anchors resolve. JavaScript syntax check passed unchanged. Static design concept visually checked. Prior v6 header, navigation and service updates retained.
+
+Browser/device visual QA remains pending. Form uploads remain unconnected. No deployment or migration changes.
