@@ -128,3 +128,15 @@ document.addEventListener('kuahiwi:languagechange', () => {
   if (status?.textContent) status.textContent = translateUi('Your mail app should open with a draft. Review it and send it there. Nothing has been submitted by this website.');
   if (search) search.dispatchEvent(new Event('input'));
 });
+
+// Event gallery: native scrolling remains available without JavaScript.
+document.querySelectorAll('.event-gallery').forEach(gallery => {
+ const track = gallery.querySelector('.event-track');
+ const previous = gallery.querySelector('[data-gallery-prev]');
+ const next = gallery.querySelector('[data-gallery-next]');
+ gallery.querySelector('.gallery-controls').hidden = false;
+ const update = () => { previous.disabled = track.scrollLeft <= 2; next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2; };
+ const move = direction => track.scrollBy({left: direction * (track.querySelector('.event-slide').getBoundingClientRect().width + 20), behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+ previous.addEventListener('click', () => move(-1)); next.addEventListener('click', () => move(1));
+ track.addEventListener('scroll', update, {passive:true}); window.addEventListener('resize', update); update();
+});

@@ -26,3 +26,8 @@ Use this package instead of v8. The header language buttons appear on the homepa
 Edit `assets/translations.js` to change a translation. `PIDGIN_REVIEW.md` provides the English and Pidgin draft side by side. The English keys must continue to match the English website copy. Review the draft wording with Shaydon before launch. Check both languages on desktop and mobile, including the menu, service rate tabs, FAQ search, video controls and contact form.
 
 The contact form still opens an email draft. File uploads are not connected. Preview noindex settings remain enabled; no domain transfer or deployment is included.
+
+## Version 10 — Events
+Upload this package instead of v9. Events is a separate page, linked from the header and footer. Upcoming events has an empty state; the past event includes the supplied flyer and 11 photos. Photos are optimized WebP, lazy loaded and fully framed; supplied social-media overlays remain part of the original photos. The event year is not inferred from the flyer. The attached MOV is not added because this update requests a photo carousel.
+
+Pidgin navigation hides the Projects link (translated as Our Bikes); English navigation and homepage project content remain. Both languages link to Events. To add an event, edit events.html and add its translations in assets/translations.js. Preserve separate upcoming and past sections.

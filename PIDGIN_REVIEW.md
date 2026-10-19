@@ -1,6 +1,6 @@
 # English / Pidgin translation review
 
-Original draft translations for Shaydon’s review. English remains the default. Edit assets/translations.js to revise the Pidgin wording. Names, prices, email addresses and phone numbers stay unchanged.
+Draft wording for Shaydon’s review. Edit assets/translations.js.
 
 | English | Pidgin draft |
 | --- | --- |
@@ -206,3 +206,12 @@ Original draft translations for Shaydon’s review. English remains the default.
 | How Kuahiwi Bicycle Care and Repair LLC collects, uses and handles website inquiries and personal information. | How Kuahiwi Bicycle Care and Repair LLC collects, uses an handles website inquiries an personal information. |
 | Return to the Kuahiwi website. | Go back to da Kuahiwi website. |
 | When you use the language toggle, your choice is saved in your browser’s local storage so the website can remember your preference. You can clear this preference through your browser settings. | When you use da language toggle, your browser saves your choice in local storage so da website can remember wat language you like. You can clear dis preference in your browser settings. |
+| Rides, good company and time on the bike. | Cruise, talk story and spend time on da bike. |
+| Upcoming events | Events coming up |
+| No upcoming events announced yet. Check back for the next ride. | No new events announced yet. Check back fo da next ride. |
+| A look back | Look back |
+| A cruise along the Kapaʻa bike path with a potluck and BYOB. Take a look back at the ride and the people who came out. | One cruise along da Kapaʻa bike path with one potluck and BYOB. Look back at da ride and everybody who came out. |
+| Gathering | Da gathering |
+| View original flyer | See da original flyer |
+| From the ride | From da ride |
+| Swipe or scroll to explore the photos. | Swipe or scroll fo see da photos. |

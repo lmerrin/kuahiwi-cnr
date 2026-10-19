@@ -25,3 +25,7 @@ Swap the two service photos. Replace privacy draft with the user-approved launch
 
 ## v9 English and Pidgin toggle
 User authorized building draft translations before owner approval. English is default; remember explicit choice locally, handling storage failures. Use original curated Pidgin copy, not automatic word replacement or copied book passages. All existing pages, hidden pricing/FAQ, form labels, dynamic status text and privacy copy participate. Names/contact details/rates remain unchanged. Set language metadata en/hwc; keep toggle accessible and navigation compact on phones. Translations remain editable in assets/translations.js and PIDGIN_REVIEW.md. No new backend, third-party translation API, analytics or migration. These are drafts for Shaydon’s review; do not claim the cited books were read in full or that legal translation has been independently verified.
+
+
+## v10 Events page specification
+Separate events.html, linked in header/footer. Navy introduction, compact upcoming section with honest empty state, cream past-event feature. Flyer alongside factual recap; horizontally scrollable photo strip below with native touch swipe and previous/next controls. Photos contained within consistent frames. No automatic movement. Reuse fonts, colors and English/Pidgin controls. Hide Projects/Our Bikes navigation only in Pidgin; keep the existing homepage content. Do not infer an event year or future dates.

@@ -10,3 +10,8 @@ Responsive CSS reviewed for 320/375/768/1024px and wide desktop: category panels
 - Mock DOM tests passed for English default, stored Pidgin preference, translated text and attributes, selected button state, exact English restoration, preserved prices/names and operation when local storage is blocked.
 - Privacy policy now discloses browser storage of the language preference.
 - Browser visual and interaction testing remains pending. Mobile fit and both language versions should be reviewed in the hosted preview before launch.
+
+## Version 10 checks
+Passed: JavaScript syntax; all four pages have language controls and header/footer Events links; unique IDs; all local references and fragment targets resolve; 11 carousel photos; distinct upcoming/past sections; homepage remains a landing page. Browser visual QA remains pending, including mobile swipe, keyboard scrolling and both languages. No migration or deployment performed.
+
+Mock DOM checks also passed for carousel movement, boundary button states, reduced motion, saved language preference, exact English restoration and blocked preference storage.

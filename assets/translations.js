@@ -1,4 +1,3 @@
-/* Original draft translations for Shaydon review. Edit the Pidgin values; keep English keys unchanged. */
 window.KUAHIWI_PIDGIN = {
   "Page Not Found | Kuahiwi": "Page No Stay Here | Kuahiwi",
   "Skip to content": "Skip to da main part",
@@ -277,7 +276,26 @@ window.KUAHIWI_PIDGIN = {
   "Shaydon with his bicycle": "Shaydon wit his bike",
   "Bicycle repairs, tune-ups, vintage restorations and custom builds in Līhuʻe, Kauaʻi. Contact Shaydon at Kuahiwi for an estimate.": "Bike repairs, tune-ups, vintage restorations an custom builds in Līhuʻe, Kauaʻi. Contact Shaydon at Kuahiwi fo one estimate.",
   "How Kuahiwi Bicycle Care and Repair LLC collects, uses and handles website inquiries and personal information.": "How Kuahiwi Bicycle Care and Repair LLC collects, uses an handles website inquiries an personal information.",
-  "Return to the Kuahiwi website.": "Go back to da Kuahiwi website."
-,
-"When you use the language toggle, your choice is saved in your browser’s local storage so the website can remember your preference. You can clear this preference through your browser settings.": "When you use da language toggle, your browser saves your choice in local storage so da website can remember wat language you like. You can clear dis preference in your browser settings."
+  "Return to the Kuahiwi website.": "Go back to da Kuahiwi website.",
+  "When you use the language toggle, your choice is saved in your browser’s local storage so the website can remember your preference. You can clear this preference through your browser settings.": "When you use da language toggle, your browser saves your choice in local storage so da website can remember wat language you like. You can clear dis preference in your browser settings.",
+  "Events": "Events",
+  "Out on two wheels": "Out on two wheels",
+  "Rides, good company and time on the bike.": "Cruise, talk story and spend time on da bike.",
+  "Upcoming events": "Events coming up",
+  "Past events": "Past events",
+  "Coming up": "Coming up",
+  "No upcoming events announced yet. Check back for the next ride.": "No new events announced yet. Check back fo da next ride.",
+  "A look back": "Look back",
+  "October 11 · 10 a.m.": "October 11 · 10 a.m.",
+  "Cruise Da Path and Bust Laugh": "Cruise Da Path and Bust Laugh",
+  "A cruise along the Kapaʻa bike path with a potluck and BYOB. Take a look back at the ride and the people who came out.": "One cruise along da Kapaʻa bike path with one potluck and BYOB. Look back at da ride and everybody who came out.",
+  "Where": "Where",
+  "Gathering": "Da gathering",
+  "View original flyer": "See da original flyer",
+  "From the ride": "From da ride",
+  "Swipe or scroll to explore the photos.": "Swipe or scroll fo see da photos.",
+  "Previous event photos": "Previous event photos",
+  "Next event photos": "Next event photos",
+  "Events | Kuahiwi Care & Repair": "Events | Kuahiwi Care & Repair",
+  "Community bike rides and past events with Kuahiwi Care and Repair on Kauaʻi.": "Community bike rides and past events with Kuahiwi Care and Repair on Kauaʻi."
 };
