@@ -3,4 +3,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self' 'sha256-V7d3dwt71jdtnGz3FtLUKSFFPO4psSTPg/iTSn3/1t0=' 'sha256-O9P8TDpW3GprW4D4yEptK7ZJb/0nd1VS1R5RzepI4CI=' 'sha256-i5p6P7edHJPZhVh4dCkC3tmlrPlnEBrU3eat9V+/xew='; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'

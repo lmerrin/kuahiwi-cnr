@@ -32,3 +32,6 @@ Separate events.html, linked in header/footer. Navy introduction, compact upcomi
 
 ## v11 Mobile menu
 Replace the hamburger with a crisp inline bicycle outline. Keep the same menu button and accessible expanded state, English/Pidgin labels, touch target and keyboard behavior. Show a close icon when expanded. No external icon dependency.
+
+## v12 Search readiness
+Use supplied full logo as favicon with a cream backing for browser contrast. Keep preview noindex. Add factual business/service structured data, consistent production canonicals and an explicit production preparation command. Preserve copy and page design. No migration, DNS or search account changes.

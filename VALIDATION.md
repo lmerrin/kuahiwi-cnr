@@ -18,3 +18,6 @@ Mock DOM checks also passed for carousel movement, boundary button states, reduc
 
 ## Version 11
 All four pages checked for bicycle/close SVG icons and retained accessible menu state/label attributes. Existing menu JavaScript remains unchanged. Visual review on a mobile browser is still pending.
+
+## Version 12
+Passed: local asset references, sitemap XML, structured data JSON and matching CSP hashes, favicon square dimensions, preview noindex on all pages. Production preparation executed in a temporary folder and verified to remove noindex only from real pages. No deployment, live indexing, Google account setup, mobile browser QA or PageSpeed measurements performed. Existing Wix URL inventory and redirect audit still required before migration.

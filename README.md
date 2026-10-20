@@ -34,3 +34,6 @@ Pidgin navigation hides the Projects link (translated as Our Bikes); English nav
 
 ## Version 11
 Use this package instead of v10. Mobile navigation now uses an outline bicycle icon and switches to a close icon while the menu is open. All v10 Events and language updates are included.
+
+## Version 12 — Favicon and SEO preparation
+Use v12 instead of v11 for review. Read SEO_LAUNCH_CHECKLIST.md. Preview stays noindex. prepare-production.py creates separate launch files only when ready; no migration has occurred.

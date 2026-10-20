@@ -1,3 +1,3 @@
 User-agent: *
-Disallow: /
-# PREVIEW: replace Disallow with Allow before launch and add Sitemap URL.
+Allow: /
+# PREVIEW: HTML pages contain noindex, nofollow. Do not remove until production launch.
