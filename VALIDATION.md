@@ -21,15 +21,3 @@ All four pages checked for bicycle/close SVG icons and retained accessible menu 
 
 ## Version 12
 Passed: local asset references, sitemap XML, structured data JSON and matching CSP hashes, favicon square dimensions, preview noindex on all pages. Production preparation executed in a temporary folder and verified to remove noindex only from real pages. No deployment, live indexing, Google account setup, mobile browser QA or PageSpeed measurements performed. Existing Wix URL inventory and redirect audit still required before migration.
-
-## Version 13
-JavaScript syntax passed. Contact handler tests passed for full name, provided subject, blank/whitespace fallback, special-character encoding, correct recipient and preserved message. Real email-app handoff remains a manual browser check.
-
-## Version 14
-Passed Node syntax checks for site.js and motion.js, all local asset references, script inclusion on all four pages, 11 photo links, 5 process steps, existing structured-data CSP hashes and preview noindex. Desktop browser verified Events counter, larger viewer opening, next photo, Escape dismissal and focus return; verified Pidgin switching and process route highlight. Viewed desktop hero and process layout. Mobile viewport, reduced-motion OS setting and live PageSpeed measurements remain pending. No external motion dependencies added; motion.js is approximately 4.4 KB uncompressed. No migration performed.
-
-## Version 15
-Passed JavaScript syntax and local asset reference checks. Browser verified selected Wheels tab, its correct pricing panel and rendered moving indicator. Added native once-only service/owner reveals, focusable service accents and actual menu activation wheel animation. No additional animation dependency. Reduced motion disables new movement; real mobile device and OS reduced-motion visual testing remain pending. Existing preview noindex retained.
-
-## Version 16
-All four pages verified to have one footer back-to-top link and one matching page-top target. Native anchors work without JavaScript; language dictionary includes label; existing reduced-motion scrolling rule retained. Mobile visual review remains pending.

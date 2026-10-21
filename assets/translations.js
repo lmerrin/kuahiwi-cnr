@@ -297,10 +297,5 @@ window.KUAHIWI_PIDGIN = {
   "Previous event photos": "Previous event photos",
   "Next event photos": "Next event photos",
   "Events | Kuahiwi Care & Repair": "Events | Kuahiwi Care & Repair",
-  "Community bike rides and past events with Kuahiwi Care and Repair on Kauaʻi.": "Community bike rides and past events with Kuahiwi Care and Repair on Kauaʻi.",
-  "Open larger event photo": "Open da bigger event photo",
-  "Close photo viewer": "Close da photo viewer",
-  "Event photo viewer": "Event photo viewer",
-  "Current photo": "Current photo",
-  "Back to top": "Back to da top"
+  "Community bike rides and past events with Kuahiwi Care and Repair on Kauaʻi.": "Community bike rides and past events with Kuahiwi Care and Repair on Kauaʻi."
 };
