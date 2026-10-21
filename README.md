@@ -37,3 +37,15 @@ Use this package instead of v10. Mobile navigation now uses an outline bicycle i
 
 ## Version 12 — Favicon and SEO preparation
 Use v12 instead of v11 for review. Read SEO_LAUNCH_CHECKLIST.md. Preview stays noindex. prepare-production.py creates separate launch files only when ready; no migration has occurred.
+
+## Version 13 — Consistent inquiry subject
+Email drafts use Kuahiwi Website Inquiry — Customer Full Name — Subject, with General inquiry when blank. The fixed prefix stays English in both language modes for Gmail filtering. The visitor must still send the email from their mail app. Use v13 instead of v12.
+
+## Version 14 — Motion and Events viewer
+Use v14 instead of v13. Adds one-time hero entrance, bicycle wheel/menu feedback, navigation underlines, pricing-panel fade, a vertical process route with active stops, event photo counter and a larger photo viewer. Viewer supports previous/next buttons, arrow keys, Escape and focus return; native photo links remain available without JavaScript or dialog support. Motion honors reduced-motion preferences. No dependencies added. Preview remains noindex; launch preparation and standardized inquiry subjects retained.
+
+## Version 15
+Completes service stagger and red hover/keyboard-focus accent, coordinated owner reveal, moving pricing marker and bicycle wheel rotation on click/tap/keyboard activation. Reduced-motion settings suppress movement. All v14 content and behavior retained. Before/after slider still needs matched photos; draggable 3D element remains outside this update.
+
+## Version 16
+Use v16 instead of v15. Circular white-outline back-to-top arrow added at the far right of every footer. Opaque navy fill, keyboard-accessible label and reduced-motion scrolling included. All previous updates retained.
