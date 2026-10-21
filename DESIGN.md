@@ -35,3 +35,24 @@ Replace the hamburger with a crisp inline bicycle outline. Keep the same menu bu
 
 ## v12 Search readiness
 Use supplied full logo as favicon with a cream backing for browser contrast. Keep preview noindex. Add factual business/service structured data, consistent production canonicals and an explicit production preparation command. Preserve copy and page design. No migration, DNS or search account changes.
+
+## v13 Inquiry email subjects
+Use a consistent English subject prefix in both language modes for reliable inbox filtering: Kuahiwi Website Inquiry — customer full name — entered subject. Fall back to General inquiry when subject is empty or whitespace. Retain the email-draft workflow.
+
+## v14 Motion specification
+One-time hero entrance; short navigation feedback; rate panel fade; vertical route highlighting the current process step; Events photo counter and native-dialog larger viewer. Use CSS transforms and opacity, IntersectionObserver, no motion dependencies or continuous render loop. Content visible without JS. Reduced-motion overrides apply globally; no scroll hijacking, no autoplay gallery, no claim of delivered inquiry.
+
+## v15 Motion completion
+One-time staggered service and shared owner-group reveals, red service hover/focus accent, a sliding red pricing marker and wheel rotation on real button activation. Use native animations, reduced-motion checks at activation, visible fallback content and observers disconnected after revealing. Keep all copy and photos.
+
+## v16 Footer back to top
+Far-right circular navy button with white outline and upward SVG arrow in the footer bottom row, on all pages. Native anchor to body top; smooth scrolling inherits reduced-motion override. Accessible English/Pidgin label and 48px touch target.
+
+## v17 Process simplification
+Remove route dots, connecting line and active-step observer. Preserve vertical cards and their content. Use only a quiet background tint on hover/focus-within; no cursor follower or scroll tracking.
+
+## Version 18
+Move return-to-top into the upper navy footer at the far right, alongside contact; right-align its own row on narrow screens.
+
+## Version 19
+Desktop order: logo, evenly spaced menu links, English/Pidgin toggle, Contact at far right. Existing mobile menu retains its Contact link; desktop-only Contact is hidden on mobile.

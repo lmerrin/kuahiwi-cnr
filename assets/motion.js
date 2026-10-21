@@ -1,17 +1,6 @@
 'use strict';
 (() => {
   const text = value => window.kuahiwiLanguage?.text(value) || value;
-  const steps = [...document.querySelectorAll('.process-frame ol > li')];
-  if (steps.length && 'IntersectionObserver' in window) {
-    const visible = new Set();
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target));
-      const current = [...visible].sort((a,b) => Math.abs(a.getBoundingClientRect().top - innerHeight * .4) - Math.abs(b.getBoundingClientRect().top - innerHeight * .4))[0];
-      steps.forEach(step => step.classList.toggle('route-current', step === current));
-    }, {rootMargin:'-15% 0px -35% 0px', threshold:[0,.25,.75]});
-    steps.forEach(step => observer.observe(step));
-  }
-
   document.querySelectorAll('.event-gallery').forEach(gallery => {
     const track = gallery.querySelector('.event-track');
     const links = [...track.querySelectorAll('.event-photo-link')];
