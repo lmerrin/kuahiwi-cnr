@@ -31,7 +31,11 @@ if (form) form.addEventListener('submit', event => {
   const body = ['Name: ' + f.get('name') + ' ' + f.get('lastName'), 'Email: ' + f.get('email'),
     'Phone: ' + (f.get('phone') || 'Not supplied'), '', String(f.get('message')),
     '', translateUi('Photos can be attached to this email before sending.')].join('\n');
-  window.location.href = 'mailto:shaydon.kbcr@gmail.com?subject=' + encodeURIComponent('Bike inquiry: ' + (f.get('service') || 'Kuahiwi')) + '&body=' + encodeURIComponent(body);
+  const singleLine = value => String(value || '').replace(/[\r\n]+/g, ' ').trim();
+  const customerName = [singleLine(f.get('name')), singleLine(f.get('lastName'))].filter(Boolean).join(' ');
+  const inquirySubject = singleLine(f.get('service')) || 'General inquiry';
+  const emailSubject = 'Kuahiwi Website Inquiry — ' + customerName + ' — ' + inquirySubject;
+  window.location.href = 'mailto:shaydon.kbcr@gmail.com?subject=' + encodeURIComponent(emailSubject) + '&body=' + encodeURIComponent(body);
   document.querySelector('#form-status').textContent = translateUi('Your mail app should open with a draft. Review it and send it there. Nothing has been submitted by this website.');
 });
 const search = document.querySelector('#faq-search');
@@ -96,6 +100,9 @@ if (tabs) {
       panels[i].hidden = !active;
       panels[i].setAttribute('role', 'tabpanel');
     });
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && panels[index].animate) {
+      panels[index].animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:220,easing:'ease-out'});
+    }
     if (focus) buttons[index].focus();
   }
   buttons.forEach((button, index) => {
